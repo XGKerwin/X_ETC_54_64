@@ -1,8 +1,6 @@
-package com.example.x_etc_54_64.activity;
+package com.example.x_etc_54_64.fragment;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.x_etc_54_64.R;
+import com.example.x_etc_54_64.bean.GJJL;
+import com.example.x_etc_54_64.bean.HJZB;
 import com.example.x_etc_54_64.net.OkHttpLo;
 import com.example.x_etc_54_64.net.OkHttpTo;
 import com.google.gson.Gson;
@@ -94,9 +94,6 @@ public class Fragment1hao extends Fragment {
                 .setOkHttpLo(new OkHttpLo() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
-
-//                        gjjlList.addAll((Collection<? extends GJJL>) new Gson().fromJson(jsonObject.optJSONArray("中医院站").toString(),
-//                                new TypeToken<List<GJJL>>(){}.getRawType()));
 
                         gjjlList = new Gson().fromJson(jsonObject.optJSONArray("中医院站").toString()
                                 , new TypeToken<List<GJJL>>() {}.getType());

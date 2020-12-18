@@ -3,7 +3,6 @@ package com.example.x_etc_54_64.activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,14 +11,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.x_etc_54_64.R;
-import com.example.x_etc_54_64.net.OkHttpLo;
-import com.example.x_etc_54_64.net.OkHttpTo;
-import com.google.gson.Gson;
+import com.example.x_etc_54_64.bean.HJZB;
+import com.example.x_etc_54_64.fragment.Fragment1hao;
+import com.example.x_etc_54_64.fragment.Fragment2hao;
 
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Activity_gjcx extends AppCompatActivity {
@@ -29,7 +24,6 @@ public class Activity_gjcx extends AppCompatActivity {
     private TextView btn1;
     private TextView btn2;
     private FragmentTransaction fragmentTransaction;
-    private List<HJZB> hjzbList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

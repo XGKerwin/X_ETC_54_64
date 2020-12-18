@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.x_etc_54_64.activity.Activity_gjcx;
+import com.example.x_etc_54_64.activity.Activity_ssjt;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.gjcx:
                                 Intent intent = new Intent(MainActivity.this, Activity_gjcx.class);
                                 startActivity(intent);
+                                break;
+                            case R.id.ssjt:
+                                Intent intent1 = new Intent(MainActivity.this, Activity_ssjt.class);
+                                startActivity(intent1);
+                                break;
+
                         }
 
 

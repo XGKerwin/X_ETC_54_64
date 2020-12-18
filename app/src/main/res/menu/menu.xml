@@ -6,5 +6,9 @@
         android:title="公交查询"
         />
 
+    <item android:id="@+id/ssjt"
+        android:title="实时交通"
+        />
+
 
 </menu>

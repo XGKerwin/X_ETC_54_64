@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include layout="@layout/biaoti"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        >
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="600dp"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/shenhui_yuan"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.7"
+                >
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:background="@drawable/qianhui_yuan"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sousuo"
+                    android:padding="5dp"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_xianlu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="25dp"
+                    android:hint="请输入公交线路"
+                    android:gravity="center|left"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:textColor="#fff"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="搜索"
+                    android:id="@+id/btn_sousuo"
+                    android:background="@drawable/yuan_bai"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="600dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索历史"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="#292929"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#656565"
+                android:layout_marginTop="10dp"
+                />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/listview"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#656565"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="清空搜索历史"
+                android:id="@+id/txt_qingkong"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="#B2B2B2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
