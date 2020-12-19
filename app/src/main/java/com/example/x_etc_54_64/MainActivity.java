@@ -1,11 +1,11 @@
 package com.example.x_etc_54_64;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,8 +16,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.x_etc_54_64.activity.Activity_clwz;
 import com.example.x_etc_54_64.activity.Activity_gjcx;
 import com.example.x_etc_54_64.activity.Activity_ssjt;
+import com.example.x_etc_54_64.activity.Activity_tjdy;
+import com.example.x_etc_54_64.activity.Activity_yhgl;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
         gethuadong();
 
-
     }
 
     private void gethuadong() {
@@ -51,18 +53,28 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                         switch (menuItem.getItemId()){
-                            case R.id.gjcx:
-                                Intent intent = new Intent(MainActivity.this, Activity_gjcx.class);
+                            case R.id.yhgl:
+                                Intent intent = new Intent(MainActivity.this, Activity_yhgl.class);
                                 startActivity(intent);
                                 break;
-                            case R.id.ssjt:
-                                Intent intent1 = new Intent(MainActivity.this, Activity_ssjt.class);
+                            case R.id.gjcx:
+                                Intent intent1 = new Intent(MainActivity.this, Activity_gjcx.class);
                                 startActivity(intent1);
                                 break;
-
+                            case R.id.ssjt:
+                                Intent intent2 = new Intent(MainActivity.this, Activity_ssjt.class);
+                                startActivity(intent2);
+                                break;
+                            case R.id.clwz:
+                                Intent intent3 = new Intent(MainActivity.this, Activity_clwz.class);
+                                startActivity(intent3);
+                                break;
+                            case R.id.tjdy:
+                                Intent intent4 = new Intent(MainActivity.this, Activity_tjdy.class);
+                                startActivity(intent4);
+                                break;
                         }
-
-
+                        dra.closeDrawer(GravityCompat.START);
                         return false;
                     }
                 });

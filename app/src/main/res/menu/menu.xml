@@ -2,12 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+    <item android:id="@+id/yhgl"
+        android:title="用户管理"
+        />
+
     <item android:id="@+id/gjcx"
         android:title="公交查询"
         />
 
     <item android:id="@+id/ssjt"
         android:title="实时交通"
+        />
+
+    <item android:id="@+id/clwz"
+        android:title="车辆违章"
+        />
+
+    <item android:id="@+id/tjdy"
+        android:title="添加订阅"
         />
 
 

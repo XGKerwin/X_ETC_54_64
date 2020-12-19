@@ -1,4 +1,4 @@
-package com.example.x_etc_54_64.activity;
+package com.example.x_etc_54_64.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,24 +7,26 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.x_etc_54_64.R;
+import com.example.x_etc_54_64.bean.SSJT_ku;
 
 import java.util.List;
 
 /**
  * author : 关鑫
  * Github : XGKerwin
- * date   : 2020/12/18 15:05
+ * date   : 2020/12/18 15:40
  */
-public class X_ssjt_adapter extends BaseAdapter {
-    private List<String> strings;
+public class X_ssjt1_adapter extends BaseAdapter {
+    private List<SSJT_ku> ssjt_kus;
 
-    public X_ssjt_adapter(List<String> strings) {
-        this.strings = strings;
+    public X_ssjt1_adapter(List<SSJT_ku> ssjt_kus) {
+        this.ssjt_kus = ssjt_kus;
     }
 
     @Override
     public int getCount() {
-        return strings.size();
+        if (ssjt_kus.size() == 0) return 0;
+        return ssjt_kus.size();
     }
 
     @Override
@@ -41,28 +43,24 @@ public class X_ssjt_adapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_ssjt, null);
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_ssjt1, null);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        String s = strings.get(position);
-        holder.txt.setText(s);
-        holder.txtNumber.setText(position+1+"");
-
+        SSJT_ku ssjt_ku = ssjt_kus.get(position);
+        holder.txt.setText(ssjt_ku.getLishi());
 
         return convertView;
     }
 
+
     class ViewHolder {
-        private TextView txtNumber;
         private TextView txt;
 
         public ViewHolder(View view) {
-            txtNumber = view.findViewById(R.id.txt_number);
             txt = view.findViewById(R.id.txt);
         }
     }
-
 }

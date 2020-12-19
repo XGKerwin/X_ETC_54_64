@@ -2,6 +2,7 @@ package com.example.x_etc_54_64.activity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -9,6 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.x_etc_54_64.R;
+import com.example.x_etc_54_64.adapter.X_ssjt_adapter;
+import com.example.x_etc_54_64.bean.SSJT;
+import com.example.x_etc_54_64.bean.SSJT_ku;
 
 import java.util.List;
 
@@ -24,6 +28,9 @@ public class Activity_ssjt_2 extends AppCompatActivity {
     private TextView txtPiaojia;
     private ListView listview;
     private X_ssjt_adapter adapter;
+    private int pos = 100;
+    private List<String> strings;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +40,7 @@ public class Activity_ssjt_2 extends AppCompatActivity {
         initView();
         getinit();
 
-        List<String> strings = ssjt.getSite();
+        strings = ssjt.getSite();
         String s1 = strings.get(0);
         String s2 = strings.get(strings.size()-1);
 
@@ -46,12 +53,26 @@ public class Activity_ssjt_2 extends AppCompatActivity {
         txtQuancheng.setText(sum+"站/"+ssjt.getMileage()+"公里");
         txtPiaojia.setText("票价：最高票价"+ssjt.getPrice()+"元");
 
-        adapter = new X_ssjt_adapter(strings);
+        SSJT_ku ssjt_ku = new SSJT_ku();
+        ssjt_ku.setLishi(ssjt.getId()+"路("+s1+"-"+s2+")");
+        ssjt_ku.setNumber(ssjt.getId());
+        ssjt_ku.save();
+
+        showlist();
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                pos = position;
+                showlist();
+            }
+        });
+
+    }
+
+    private void showlist() {
+        adapter = new X_ssjt_adapter(strings,pos);
         listview.setAdapter(adapter);
-
-
-
-
     }
 
     private void getinit() {

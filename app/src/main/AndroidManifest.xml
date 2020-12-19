@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.Activity_ssjt_2"></activity>
+        <activity android:name=".activity.Activity_yhsc"></activity>
+        <activity android:name=".activity.Activity_tjdy" />
+        <activity android:name=".activity.Activity_yhgl" />
+        <activity android:name=".activity.Activity_clwz2" />
+        <activity android:name=".activity.Activity_clwz" />
+        <activity android:name=".activity.Activity_ssjt_2" />
         <activity android:name=".activity.Activity_ssjt" />
         <activity android:name=".activity.Activity_gjcx" />
         <activity android:name=".MainActivity">

@@ -1,4 +1,4 @@
-package com.example.x_etc_54_64.activity;
+package com.example.x_etc_54_64.bean;
 
 import java.io.Serializable;
 import java.util.List;
