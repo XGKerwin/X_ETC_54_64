@@ -14,12 +14,32 @@
         android:title="实时交通"
         />
 
+    <item android:id="@+id/hjjc"
+        android:title="环境监测"
+        />
+
+    <item android:id="@+id/wzfx"
+        android:title="违章分析"
+        />
+
     <item android:id="@+id/clwz"
         android:title="车辆违章"
         />
 
     <item android:id="@+id/tjdy"
         android:title="添加订阅"
+        />
+
+    <item android:id="@+id/tqxx"
+        android:title="天气信息"
+        />
+
+    <item android:id="@+id/wzlx"
+        android:title="违章类型"
+        />
+
+    <item android:id="@+id/lxzs"
+        android:title="旅行助手"
         />
 
 

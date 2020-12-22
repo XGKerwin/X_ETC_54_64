@@ -13,7 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.Activity_yhsc"></activity>
+        <activity android:name=".activity.Activity_lxzs"></activity>
+        <activity android:name=".activity.Activity_wzlx" />
+        <activity android:name=".activity.Activity_wzfx" />
+        <activity android:name=".activity.Activity_hjjc" />
+        <activity android:name=".activity.Activity_tqxx" />
+        <activity android:name=".activity.Activity_yhsc" />
         <activity android:name=".activity.Activity_tjdy" />
         <activity android:name=".activity.Activity_yhgl" />
         <activity android:name=".activity.Activity_clwz2" />

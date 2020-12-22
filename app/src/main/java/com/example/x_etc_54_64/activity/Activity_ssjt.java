@@ -39,7 +39,6 @@ public class Activity_ssjt extends AppCompatActivity {
     private String bianhao = "";
     private EditText edXianlu;
     private TextView btnSousuo;
-    private String TAG = "ssjt";
     private List<SSJT_ku> ssjt_kus;
     private X_ssjt1_adapter adapter;
 
